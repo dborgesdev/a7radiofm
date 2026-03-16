@@ -42,6 +42,28 @@ const Footer = () => {
           </p>
         </div>
       </div>
+      {/* Sub-footer com créditos */}
+<div className="border-t border-white/10 bg-[#000B1A] py-6"> {/* Navy Blue Profundo */}
+  <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+    
+    <p className="text-slate-400 text-xs tracking-wide">
+      © {new Date().getFullYear()} Rádio A7 Gospel. Todos os direitos reservados.
+    </p>
+
+    <div className="text-xs text-slate-400">
+      Desenvolvido por{" "}
+      <a 
+        href="https://smartlocal.com.br" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="font-semibold text-[#FF8C00] hover:text-[#FFA500] transition-all duration-300 border-b border-transparent hover:border-[#FF8C00] pb-0.5"
+      >
+        Douglas Borges — Smart Local
+      </a>
+    </div>
+
+  </div>
+</div>
     </footer>);
 
 };
