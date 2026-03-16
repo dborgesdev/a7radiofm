@@ -45,7 +45,7 @@ const LivePlayer = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-3xl mx-auto glass-card-strong rounded-3xl overflow-hidden player-glow">
           
-          <div className="p-4 pb-0 bg-transparent">
+          <div className="p-4 bg-transparent">
             <iframe
               src="https://player.hdradios.net/player-topo-html5/6774/000000"
               className="w-full rounded-2xl"
