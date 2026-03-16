@@ -1,9 +1,8 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import QuickAccessGrid from "@/components/QuickAccessGrid";
+import WhyListenSection from "@/components/WhyListenSection";
 import LivePlayer from "@/components/LivePlayer";
 import AboutSection from "@/components/AboutSection";
-import WhyListenSection from "@/components/WhyListenSection";
 import ContentCards from "@/components/ContentCards";
 import QuoteBanner from "@/components/QuoteBanner";
 import ArtistsSection from "@/components/ArtistsSection";
@@ -17,10 +16,9 @@ const Index = () => {
     <div className="min-h-screen bg-background overflow-x-hidden">
       <Header />
       <HeroSection />
-      <QuickAccessGrid />
+      <WhyListenSection />
       <LivePlayer />
       <AboutSection />
-      <WhyListenSection />
       <ContentCards />
       <QuoteBanner />
       <ArtistsSection />

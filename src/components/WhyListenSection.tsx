@@ -10,17 +10,8 @@ const features = [
 
 const WhyListenSection = () => {
   return (
-    <section className="py-24 relative">
+    <section className="relative z-10 -mt-20 pb-16">
       <div className="container mx-auto px-4">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="font-display text-4xl md:text-5xl font-bold text-center text-foreground mb-16"
-        >
-          Por que escolher a <span className="brand-gradient-text">A7 Gospel</span>?
-        </motion.h2>
-
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {features.map((f, i) => (
             <motion.div
@@ -30,7 +21,7 @@ const WhyListenSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               whileHover={{ scale: 1.02, y: -5 }}
-              className="glass-card rounded-3xl p-8 text-center group"
+              className="glass-card-strong rounded-3xl p-8 text-center group card-depth"
             >
               <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-accent/20 transition-colors">
                 <f.icon size={28} className="text-accent" />
