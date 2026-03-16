@@ -27,8 +27,8 @@ const LivePlayer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
+          className="text-center mb-12">
+          
           <div className="inline-flex items-center gap-2 brand-gradient px-4 py-1.5 rounded-full text-xs font-semibold text-accent-foreground mb-4 uppercase tracking-wider">
             <span className="w-2 h-2 rounded-full bg-accent-foreground animate-pulse" />
             Ao Vivo
@@ -43,53 +43,53 @@ const LivePlayer = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-3xl mx-auto glass-card-strong rounded-3xl overflow-hidden player-glow"
-        >
-          <div className="p-4 pb-0">
+          className="max-w-3xl mx-auto glass-card-strong rounded-3xl overflow-hidden player-glow">
+          
+          <div className="p-4 pb-0 bg-transparent">
             <iframe
               src="https://player.hdradios.net/player-topo-html5/6774/000000"
               className="w-full rounded-2xl"
               style={{ height: '280px', border: 'none' }}
               title="Player Rádio A7 Gospel"
               loading="lazy"
-              allow="autoplay"
-            />
+              allow="autoplay" />
+            
           </div>
 
           {/* Auto-sliding carousel */}
           <div className="relative h-48 md:h-56 overflow-hidden">
-            {slides.map((slide, i) => (
-              <div
-                key={i}
-                className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
-                style={{ opacity: current === i ? 1 : 0 }}
-              >
+            {slides.map((slide, i) =>
+            <div
+              key={i}
+              className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+              style={{ opacity: current === i ? 1 : 0 }}>
+              
                 <img
-                  src={slide}
-                  alt="Gospel worship"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
+                src={slide}
+                alt="Gospel worship"
+                className="w-full h-full object-cover"
+                loading="lazy" />
+              
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
               </div>
-            ))}
+            )}
             {/* Dots */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-              {slides.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrent(i)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    current === i ? 'bg-accent w-6' : 'bg-foreground/30'
-                  }`}
-                />
-              ))}
+              {slides.map((_, i) =>
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                current === i ? 'bg-accent w-6' : 'bg-foreground/30'}`
+                } />
+
+              )}
             </div>
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default LivePlayer;
