@@ -49,7 +49,7 @@ const LivePlayer = () => {
             <iframe
               src="https://player.hdradios.net/player-topo-html5/6774/000000"
               className="w-full rounded-2xl"
-              style={{ height: '280px', border: 'none' }}
+              style={{ height: '60px', border: 'none' }}
               title="Player Rádio A7 Gospel"
               loading="lazy"
               allow="autoplay" />
