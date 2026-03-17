@@ -31,7 +31,7 @@ const Header = () => {
       
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          <img alt="Rádio A7 Gospel" className="h-10 md:h-12 w-auto" src="/lovable-uploads/786327d9-2a25-4976-be3a-22565d1cc42a.png" />
+          <img alt="Rádio A7 Gospel" className="h-12 md:h-14 w-auto" src="/lovable-uploads/786327d9-2a25-4976-be3a-22565d1cc42a.png" />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
