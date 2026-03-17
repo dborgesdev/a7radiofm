@@ -19,7 +19,7 @@ const Footer = () => {
           {/* Redes Sociais com CTAs Estratégicos */}
           <div className="flex items-center gap-4">
             <a
-              href="https://www.instagram.com/agospelfm"
+              href="https://www.instagram.com/radioa7gospelfm"
               target="_blank"
               rel="noopener noreferrer"
               className="glass-card w-12 h-12 rounded-xl flex items-center justify-center text-muted-foreground hover:text-accent transition-colors"
