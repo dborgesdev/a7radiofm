@@ -13,7 +13,7 @@ const Footer = () => {
               src="/lovable-uploads/6d8380c6-efde-4fa8-804d-9ffd3fc21b40.png" />
             
             <p className="text-muted-foreground font-body text-lg">Você ouve e adora.</p>
-            <p className="text-muted-foreground/60 font-body text-base">Apucarana - PR</p>
+            <p className="text-muted-foreground/60 font-body text-base">Apucarana - Paraná</p>
           </div>
 
           {/* Redes Sociais com CTAs Estratégicos */}
