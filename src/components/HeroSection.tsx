@@ -21,17 +21,17 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-sm md:text-base uppercase tracking-[0.2em] text-muted-foreground mb-6 font-body"
-        >
-          Transmissão 24h • Apucarana/PR
+          className="text-sm md:text-base uppercase tracking-[0.2em] text-muted-foreground mb-6 font-body">
+          
+          Você ouve e adora!   
         </motion.p>
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: [0.23, 1, 0.32, 1] }}
-          className="font-display text-5xl md:text-7xl lg:text-8xl font-bold hero-text-gradient max-w-5xl mx-auto mb-8"
-        >
+          className="font-display text-5xl md:text-7xl lg:text-8xl font-bold hero-text-gradient max-w-5xl mx-auto mb-8">
+          
           Onde a Palavra ganha voz e a música vira oração.
         </motion.h1>
 
@@ -39,8 +39,8 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 font-body"
-        >
+          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 font-body">
+          
           Conectando corações ao céu. Transmissão 24 horas de excelência, propósito e fé.
         </motion.p>
 
@@ -51,8 +51,8 @@ const HeroSection = () => {
           transition={{ duration: 0.5, delay: 0.8 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="inline-flex items-center gap-3 brand-gradient px-8 py-4 rounded-2xl text-lg font-semibold text-accent-foreground animate-pulse-glow cursor-pointer"
-        >
+          className="inline-flex items-center gap-3 brand-gradient px-8 py-4 rounded-2xl text-lg font-semibold text-accent-foreground animate-pulse-glow cursor-pointer">
+          
           <PlayCircle size={28} />
           Ouça Agora
         </motion.a>
@@ -60,8 +60,8 @@ const HeroSection = () => {
 
       {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
