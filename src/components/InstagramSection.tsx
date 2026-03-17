@@ -9,8 +9,8 @@ const InstagramSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
+          viewport={{ once: true }}>
+          
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
             Viva a fé em <span className="brand-gradient-text">movimento</span>
           </h2>
@@ -18,20 +18,20 @@ const InstagramSection = () => {
             Acompanhe nossos bastidores e conteúdos exclusivos no Instagram.
           </p>
           <motion.a
-            href="https://www.instagram.com/agospelfm"
+
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-3 glass-card-strong px-8 py-4 rounded-2xl font-semibold text-foreground hover:border-accent/30 transition-all border border-accent/20"
-          >
+            className="inline-flex items-center gap-3 glass-card-strong px-8 py-4 rounded-2xl font-semibold text-foreground hover:border-accent/30 transition-all border border-accent/20" href="https://www.instagram.com/radioa7gospelfm">
+            
             <Instagram size={24} className="text-accent" />
             Seguir @agospelfm
           </motion.a>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default InstagramSection;
