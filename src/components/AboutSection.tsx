@@ -13,8 +13,8 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
-            className="relative"
-          >
+            className="relative">
+            
             <div className="rounded-3xl overflow-hidden relative">
               <img src={aboutImg} alt="Ouvinte da Rádio A7 Gospel" className="w-full h-auto object-cover aspect-[3/4]" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
@@ -29,17 +29,17 @@ const AboutSection = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2, ease: [0.23, 1, 0.32, 1] }}
-          >
+            transition={{ duration: 0.7, delay: 0.2, ease: [0.23, 1, 0.32, 1] }}>
+            
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
               Conectando{" "}
               <span className="brand-gradient-text">Corações</span>{" "}
               ao Céu
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8 font-body">
-              A Rádio A7 Gospel é mais que uma emissora — é um canal de fé, esperança e adoração.
-              Com uma programação inspiradora 24 horas por dia, levamos até você o melhor da música
-              gospel, mensagens edificantes, devocionais e entrevistas que fortalecem a caminhada cristã.
+              A Rádio A7 Gospel é mais que uma emissora — é um canal de fé, esperança e adoração. Com uma programação inspiradora 24 horas por dia, levamos até você o melhor da música gospel e mensagens edificantes que fortalecem a caminhada cristã.
+            
+
             </p>
             <p className="text-muted-foreground leading-relaxed mb-10 font-body">
               Seja no carro, em casa ou no trabalho, sintonize e deixe a presença de Deus transformar o seu dia.
@@ -48,15 +48,15 @@ const AboutSection = () => {
               href="#player"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center gap-2 glass-card-strong px-8 py-4 rounded-2xl font-semibold text-foreground hover:border-accent/30 transition-all cursor-pointer"
-            >
+              className="inline-flex items-center gap-2 glass-card-strong px-8 py-4 rounded-2xl font-semibold text-foreground hover:border-accent/30 transition-all cursor-pointer">
+              
               Sintonize a Vida
             </motion.a>
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default AboutSection;
