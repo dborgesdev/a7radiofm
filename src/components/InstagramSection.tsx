@@ -26,7 +26,7 @@ const InstagramSection = () => {
             className="inline-flex items-center gap-3 glass-card-strong px-8 py-4 rounded-2xl font-semibold text-foreground hover:border-accent/30 transition-all border border-accent/20" href="https://www.instagram.com/radioa7gospelfm">
             
             <Instagram size={24} className="text-accent" />
-            Seguir @agospelfm
+            Seguir @radioa7gospelfm
           </motion.a>
         </motion.div>
       </div>
