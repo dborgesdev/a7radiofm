@@ -21,7 +21,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-sm md:text-base uppercase tracking-[0.2em] text-muted-foreground mb-6 font-body">
+          className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-6 font-body md:text-2xl">
           
           Você ouve e adora!   
         </motion.p>
