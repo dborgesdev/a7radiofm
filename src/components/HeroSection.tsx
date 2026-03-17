@@ -1,13 +1,36 @@
 import { motion } from "framer-motion";
 import { PlayCircle } from "lucide-react";
-import heroImg from "@/assets/hero-worship.jpg";
+import { useEffect, useState } from "react";
+import heroSlide1 from "@/assets/hero-slide-1.jpg";
+import heroSlide2 from "@/assets/hero-slide-2.jpg";
+import heroSlide3 from "@/assets/hero-slide-3.jpg";
+import heroSlide4 from "@/assets/hero-slide-4.jpg";
+
+const slides = [heroSlide1, heroSlide2, heroSlide3, heroSlide4];
 
 const HeroSection = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative min-h-svh flex items-center justify-center overflow-hidden">
-      {/* Background image */}
+      {/* Background slideshow */}
       <div className="absolute inset-0">
-        <img src={heroImg} alt="" className="w-full h-full object-cover" />
+        {slides.map((slide, i) => (
+          <img
+            key={i}
+            src={slide}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[2000ms] ease-in-out"
+            style={{ opacity: current === i ? 1 : 0 }}
+          />
+        ))}
         <div className="absolute inset-0 bg-background/70" />
         <div className="absolute inset-0 aura-bg" />
       </div>
@@ -22,8 +45,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="uppercase tracking-[0.2em] text-muted-foreground mb-6 font-body md:text-2xl text-base">
-          
-          Você ouve e adora!   
+          Você ouve e adora!
         </motion.p>
 
         <motion.h1
@@ -31,7 +53,6 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: [0.23, 1, 0.32, 1] }}
           className="font-display text-5xl md:text-7xl lg:text-8xl font-bold hero-text-gradient max-w-5xl mx-auto mb-8">
-          
           Onde a Palavra ganha voz e a música vira oração.
         </motion.h1>
 
@@ -40,7 +61,6 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 font-body">
-          
           Conectando corações ao céu. Transmissão 24 horas de excelência, propósito e fé.
         </motion.p>
 
@@ -52,7 +72,6 @@ const HeroSection = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="inline-flex items-center gap-3 brand-gradient px-8 py-4 rounded-2xl text-lg font-semibold text-accent-foreground animate-pulse-glow cursor-pointer">
-          
           <PlayCircle size={28} />
           Ouça Agora
         </motion.a>
@@ -60,8 +79,8 @@ const HeroSection = () => {
 
       {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
-    </section>);
-
+    </section>
+  );
 };
 
 export default HeroSection;
