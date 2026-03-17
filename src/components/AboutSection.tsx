@@ -41,7 +41,7 @@ const AboutSection = () => {
             
 
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-10 font-body">
+            <p className="text-muted-foreground leading-relaxed mb-10 font-body text-lg">
               Seja no carro, em casa ou no trabalho, sintonize e deixe a presença de Deus transformar o seu dia.
             </p>
             <motion.a
