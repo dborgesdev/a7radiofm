@@ -44,9 +44,9 @@ const Header = () => {
           {/* Logo - Visível apenas no Desktop nesta posição */}
           <a href="#" className="hidden md:flex items-center gap-2">
             <img 
-              alt="Rádio A7 Sertanejo" 
+              alt="Rádio A7 Gospel" 
               className="h-16 w-auto" 
-              src="logo_a7sertanejo.png" 
+              src="logo_a7gospel.png" 
             />
           </a>
         </div>
@@ -56,9 +56,9 @@ const Header = () => {
           {/* Logo Centralizado - Visível apenas no Mobile */}
           <a href="#" className="md:hidden flex items-center">
             <img 
-              alt="Rádio A7 Sertanejo" 
+              alt="Rádio A7 Gospel" 
               className="h-14 w-auto" 
-              src="logo_a7sertanejo.png" 
+              src="logo_a7gospel.png" 
             />
           </a>
 
