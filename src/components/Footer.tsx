@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start gap-3">
             <img
               alt="Rádio A7 Gospel"
-              className="h-16 w-auto"
+              className="h-18 w-auto"
               src="/logo_a7gospel.png" />
             
             <p className="text-muted-foreground font-body text-lg">Você ouve e adora.</p>
