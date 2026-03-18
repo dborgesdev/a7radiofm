@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo-a7-gospel.png";
 
 const navLinks = [
   { label: "Ao Vivo", target: "#player" },
@@ -29,55 +28,69 @@ const Header = () => {
         scrolled ? "glass-card-strong py-2" : "py-4"
       }`}
     >
-      {/* MODIFICAÇÃO PRINCIPAL: 
-          Alterado para grid grid-cols-3 para garantir o centro matemático.
-      */}
-      <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-3 items-center">
+      <div className="container mx-auto px-4 flex items-center justify-between">
         
-        {/* Lado Esquerdo: Navegação Desktop */}
-        <nav className="hidden md:flex items-center gap-6">
-          {navLinks.map((link) => (
-            <a
-              key={link.target}
-              href={link.target}
-              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors duration-300"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
-
-        {/* Centro: Logo (Centralizado no Grid) */}
-        <div className="flex justify-start md:justify-center">
-          <a href="#" className="flex items-center">
-            <img 
-              alt="Rádio A7 Sertanejo" 
-              className="h-18 w-auto transition-all duration-300" 
-              src="logo_a7gospel.png" 
-            />
-          </a>
-        </div>
-
-        {/* Lado Direito: Botão e Menu Mobile */}
-        <div className="flex justify-end items-center gap-4">
-          <a
-            href="#app"
-            className="hidden md:block brand-gradient px-5 py-2 rounded-lg text-sm font-semibold text-accent-foreground hover:scale-105 transition-transform"
-          >
-            Baixar App
-          </a>
-
+        {/* 1. ZONA ESQUERDA: Menu Mobile (Mobile) / Logo (Desktop) */}
+        <div className="flex flex-1 md:flex-none items-center">
+          {/* Botão Menu - Visível apenas no Mobile */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden text-foreground p-2"
             aria-label="Menu"
           >
-            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
+
+          {/* Logo - Visível apenas no Desktop nesta posição */}
+          <a href="#" className="hidden md:flex items-center gap-2">
+            <img 
+              alt="Rádio A7 Sertanejo" 
+              className="h-16 w-auto" 
+              src="logo_a7sertanejo.png" 
+            />
+          </a>
+        </div>
+
+        {/* 2. ZONA CENTRAL: Logo (Apenas no Mobile) / Nav Links (Desktop) */}
+        <div className="flex flex-[2] md:flex-1 justify-center md:justify-start md:pl-12">
+          {/* Logo Centralizado - Visível apenas no Mobile */}
+          <a href="#" className="md:hidden flex items-center">
+            <img 
+              alt="Rádio A7 Sertanejo" 
+              className="h-14 w-auto" 
+              src="logo_a7sertanejo.png" 
+            />
+          </a>
+
+          {/* Navegação Desktop */}
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.target}
+                href={link.target}
+                className="text-sm font-medium text-foreground/70 hover:text-[#FF4E00] transition-colors duration-300"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+
+        {/* 3. ZONA DIREITA: Espaçador (Mobile) / Botão CTA (Desktop) */}
+        <div className="flex flex-1 md:flex-none justify-end">
+          <a
+            href="#app"
+            className="hidden md:block brand-gradient px-6 py-2.5 rounded-lg text-sm font-semibold text-accent-foreground hover:scale-105 transition-transform"
+          >
+            Baixar App
+          </a>
+          
+          {/* Espaçador invisível no mobile para manter o centro do logo perfeito */}
+          <div className="w-10 md:hidden"></div>
         </div>
       </div>
 
-      {/* Menu Mobile */}
+      {/* Menu Mobile Dropdown */}
       {mobileOpen && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -89,7 +102,7 @@ const Header = () => {
               key={link.target}
               href={link.target}
               onClick={() => setMobileOpen(false)}
-              className="text-foreground/80 hover:text-primary py-2 text-lg font-medium transition-colors"
+              className="text-foreground/80 hover:text-[#FF4E00] py-2 text-lg font-medium transition-colors"
             >
               {link.label}
             </a>
