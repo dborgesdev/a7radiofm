@@ -25,7 +25,7 @@ const Header = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "glass-card-strong py-4" : "py-6"
+        scrolled ? "glass-card-strong py-2" : "py-4"
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
@@ -38,7 +38,7 @@ const Header = () => {
             className="md:hidden text-foreground p-2"
             aria-label="Menu"
           >
-            {mobileOpen ? <X size={28} /> : <Menu size={28} />}
+            {mobileOpen ? <X size={32} /> : <Menu size={32} />}
           </button>
 
           {/* Logo - Visível apenas no Desktop nesta posição */}
@@ -52,12 +52,12 @@ const Header = () => {
         </div>
 
         {/* 2. ZONA CENTRAL: Logo (Apenas no Mobile) / Nav Links (Desktop) */}
-        <div className="flex flex-[2] md:flex-1 justify-center md:justify-start md:pl-12">
+        <div className="flex flex-[3] md:flex-1 justify-center md:justify-start md:pl-12">
           {/* Logo Centralizado - Visível apenas no Mobile */}
           <a href="#" className="md:hidden flex items-center">
             <img 
               alt="Rádio A7 Gospel" 
-              className="h-[80px] w-auto object-contain" 
+              className="h-[120px] w-auto object-contain" 
               src="logo_a7gospel.png" 
             />
           </a>
