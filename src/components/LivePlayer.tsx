@@ -34,7 +34,7 @@ const LivePlayer = () => {
             Ao Vivo
           </div>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">
-            Sintonize Agora
+            Ouça Agora
           </h2>
         </motion.div>
 
