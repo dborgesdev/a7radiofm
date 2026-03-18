@@ -45,7 +45,7 @@ const Header = () => {
           <a href="#" className="hidden md:flex items-center gap-2">
             <img 
               alt="Rádio A7 Gospel" 
-              className="h-[100px] w-auto object-contain transition-all duration-300" 
+              className="h-20 w-auto object-contain transition-all duration-300" 
               src="logo_a7gospel.png" 
             />
           </a>
