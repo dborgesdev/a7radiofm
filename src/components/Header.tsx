@@ -40,8 +40,8 @@ const Header = () => {
           <a href="#" className="flex items-center">
             <img 
               alt="Rádio A7 Sertanejo" 
-              className="h-12 md:h-16 w-auto transition-all duration-300" 
-              src="/lovable-uploads/f540ca60-c694-408a-b5f3-6b895be4a0a3.png" 
+              className="h-16 w-auto transition-all duration-300" 
+              src="logo_a7gospel.png" 
             />
           </a>
         </div>
