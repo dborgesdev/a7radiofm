@@ -9,8 +9,8 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start gap-3">
             <img
               alt="Rádio A7 Gospel"
-              className="h-14 w-auto"
-              src="/lovable-uploads/6d8380c6-efde-4fa8-804d-9ffd3fc21b40.png" />
+              className="h-16 w-auto"
+              src="/logo_a7gospel.png" />
             
             <p className="text-muted-foreground font-body text-lg">Você ouve e adora.</p>
             <p className="text-muted-foreground/60 font-body text-base">Apucarana - Paraná</p>
