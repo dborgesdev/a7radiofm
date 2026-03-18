@@ -91,7 +91,7 @@ const AppDownload = () => {
                 <img
 
                   alt="App Rádio A7 Gospel"
-                  className="w-full h-full object-fill" src="/lovable-uploads/ac421d13-dfcf-4634-a135-96e3283c2755.jpg" />
+                  className="w-full h-full object-fill" src="/tela-app-a7gospel" />
                 
               </div>
               {/* Glow effect behind phone */}
