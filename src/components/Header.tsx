@@ -1,3 +1,15 @@
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo-a7-gospel.png";
+
+const navLinks = [
+  { label: "Ao Vivo", target: "#player" },
+  { label: "Sobre", target: "#sobre" },
+  { label: "Conteúdo", target: "#conteudo" },
+  { label: "App", target: "#app" }
+];
+
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
