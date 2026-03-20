@@ -19,10 +19,9 @@ const HeroSection = () => {
   }, []);
 
   return (
-    {/* 1. Trocamos 'items-center' por 'flex-col' e adicionamos 'pt-32 md:pt-40' para blindar a área do header */}
-    <section className="relative min-h-svh flex flex-col justify-center overflow-hidden pt-32 md:pt-40 pb-16">
+    <section className="relative min-h-dvh w-full flex flex-col overflow-hidden">
       {/* Background slideshow */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-0">
         {slides.map((slide, i) => (
           <img
             key={i}
@@ -36,51 +35,54 @@ const HeroSection = () => {
         <div className="absolute inset-0 aura-bg" />
       </div>
 
-      {/* Animated orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-accent/10 blur-[120px] animate-float" />
-      <div className="absolute bottom-1/4 right-1/4 w-72 h-72 rounded-full bg-spiritual/10 blur-[100px] animate-float" style={{ animationDelay: '3s' }} />
+      {/* SOLUÇÃO DEFINITIVA: 
+          1. 'pt-[80px] md:pt-[100px]' reserva o espaço exato do seu Header fixo.
+          2. 'flex-1' faz com que este container ocupe todo o resto da tela disponível.
+          3. 'justify-center' centraliza o texto apenas no espaço que sobrou abaixo do Header.
+      */}
+      <div className="relative z-10 container mx-auto px-4 flex-1 flex flex-col justify-center items-center text-center pt-[80px] md:pt-[100px] pb-12">
+        
+        <div className="max-w-5xl w-full">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="uppercase tracking-[0.2em] text-muted-foreground mb-4 md:mb-6 font-body text-sm md:text-2xl">
+            Você ouve e adora!
+          </motion.p>
 
-      {/* 2. Adicionamos 'my-auto' para garantir a centralização no espaço restante, sem invadir o topo */}
-      <div className="relative z-10 container mx-auto px-4 text-center my-auto flex flex-col items-center">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="uppercase tracking-[0.2em] text-muted-foreground mb-6 font-body md:text-2xl text-base">
-          Você ouve e adora!
-        </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: [0.23, 1, 0.32, 1] }}
+            className="font-display text-4xl md:text-7xl lg:text-8xl font-bold hero-text-gradient mb-6 md:mb-8 leading-[1.1]">
+            Onde a Palavra ganha voz e a música vira oração.
+          </motion.h1>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: [0.23, 1, 0.32, 1] }}
-          className="font-display text-5xl md:text-7xl lg:text-8xl font-bold hero-text-gradient max-w-5xl mx-auto mb-8">
-          Onde a Palavra ganha voz e a música vira oração.
-        </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-12 font-body">
+            Conectando corações ao céu. Transmissão 24 horas de excelência, propósito e fé.
+          </motion.p>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 font-body">
-          Conectando corações ao céu. Transmissão 24 horas de excelência, propósito e fé.
-        </motion.p>
-
-        <motion.a
-          href="#player"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="inline-flex items-center gap-3 brand-gradient px-8 py-4 rounded-2xl text-lg font-semibold text-accent-foreground animate-pulse-glow cursor-pointer">
-          <PlayCircle size={28} />
-          Ouça Agora
-        </motion.a>
+          <motion.a
+            href="#player"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center gap-3 brand-gradient px-6 py-3 md:px-8 md:py-4 rounded-2xl text-base md:text-lg font-semibold text-accent-foreground animate-pulse-glow cursor-pointer">
+            <PlayCircle size={24} className="md:w-7 md:h-7" />
+            Ouça Agora
+          </motion.a>
+        </div>
       </div>
 
       {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent z-10" />
     </section>
   );
 };
