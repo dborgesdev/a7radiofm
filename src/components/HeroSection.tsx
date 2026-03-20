@@ -19,7 +19,8 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-svh flex items-center justify-center overflow-hidden">
+    {/* 1. Trocamos 'items-center' por 'flex-col' e adicionamos 'pt-32 md:pt-40' para blindar a área do header */}
+    <section className="relative min-h-svh flex flex-col justify-center overflow-hidden pt-32 md:pt-40 pb-16">
       {/* Background slideshow */}
       <div className="absolute inset-0">
         {slides.map((slide, i) => (
@@ -39,7 +40,8 @@ const HeroSection = () => {
       <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-accent/10 blur-[120px] animate-float" />
       <div className="absolute bottom-1/4 right-1/4 w-72 h-72 rounded-full bg-spiritual/10 blur-[100px] animate-float" style={{ animationDelay: '3s' }} />
 
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      {/* 2. Adicionamos 'my-auto' para garantir a centralização no espaço restante, sem invadir o topo */}
+      <div className="relative z-10 container mx-auto px-4 text-center my-auto flex flex-col items-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
