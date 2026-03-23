@@ -26,6 +26,10 @@ const VideoSection = () => {
             A Palavra em <span className="brand-gradient-text">Destaque</span>
           </motion.h2>
 
+           <p className="text-muted-foreground text-lg font-body max-w-xl mx-auto">
+            Assista e seja edificado
+          </p>
+
           {/* Container do Vídeo com Aspect Ratio e Estilo Glass */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
@@ -46,11 +50,7 @@ const VideoSection = () => {
               />
             </div>
           </motion.div>
-
-          {/* Subtexto decorativo opcional */}
-          <p className="text-lg text-muted-foreground leading-relaxed mb-8 font-body">
-            Assista e seja edificado
-          </p>
+         
         </div>
       </div>
     </section>
