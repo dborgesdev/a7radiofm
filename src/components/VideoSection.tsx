@@ -17,19 +17,20 @@ const VideoSection = () => {
         <div className="flex flex-col items-center">
           
           {/* Título H2 Estilizado */}
-          <motion.h2 
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-sans font-bold text-white mb-10 text-center tracking-tight"
+            className="text-center mb-16"
           >
-            A Palavra em <span className="brand-gradient-text">Destaque</span>
-          </motion.h2>
-
-           <p className="text-muted-foreground text-lg font-body max-w-xl mx-auto">
-            Assista e seja edificado
-          </p>
-
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
+              A Palavra em <span className="brand-gradient-text">Destaque</span>
+            </h2>
+            <p className="text-muted-foreground text-lg font-body max-w-xl mx-auto">
+              Assista e seja edificado
+            </p>
+          </motion.div>
+          
           {/* Container do Vídeo com Aspect Ratio e Estilo Glass */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
