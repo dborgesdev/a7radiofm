@@ -23,7 +23,7 @@ const VideoSection = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-sans font-bold text-white mb-10 text-center tracking-tight"
           >
-            A Palavra em <span className="text-primary brightness-125">Destaque</span>
+            A Palavra em <span className="brand-gradient-text">Destaque</span>
           </motion.h2>
 
           {/* Container do Vídeo com Aspect Ratio e Estilo Glass */}
@@ -48,7 +48,7 @@ const VideoSection = () => {
           </motion.div>
 
           {/* Subtexto decorativo opcional */}
-          <p className="mt-6 text-zinc-500 font-sans text-sm tracking-widest uppercase">
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8 font-body">
             Assista e seja edificado
           </p>
         </div>
