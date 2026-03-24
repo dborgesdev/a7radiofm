@@ -10,7 +10,6 @@ import ArtistsSection from "@/components/ArtistsSection";
 import AppDownload from "@/components/AppDownload";
 import InstagramSection from "@/components/InstagramSection";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
@@ -27,7 +26,6 @@ const Index = () => {
       <AppDownload />
       <InstagramSection />
       <Footer />
-      <WhatsAppButton />
     </div>
   );
 };
