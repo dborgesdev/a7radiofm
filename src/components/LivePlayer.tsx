@@ -5,14 +5,14 @@ import carouselArtist from "@/assets/carousel-artist-1.jpg";
 import carouselBand from "@/assets/carousel-band-1.jpg";
 import carouselCrowd from "@/assets/carousel-crowd-1.jpg";
 
-const slides = [carouselWorship, carouselArtist, carouselBand, carouselCrowd];
+const images = [carouselWorship, carouselArtist, carouselBand, carouselCrowd];
 
 const LivePlayer = () => {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
+      setCurrent((prev) => (prev + 1) % images.length);
     }, 4000);
     return () => clearInterval(interval);
   }, []);
@@ -27,8 +27,8 @@ const LivePlayer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12">
-          
+          className="text-center mb-12"
+        >
           <div className="inline-flex items-center gap-2 brand-gradient px-4 py-1.5 rounded-full text-xs font-semibold text-accent-foreground mb-4 uppercase tracking-wider">
             <span className="w-2 h-2 rounded-full bg-accent-foreground animate-pulse" />
             Ao Vivo
@@ -39,57 +39,62 @@ const LivePlayer = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-3xl mx-auto glass-card-strong rounded-3xl overflow-hidden player-glow">
-          
-          <div className="p-4 bg-transparent">
-            <iframe
-              src="https://player.hdradios.net/player-topo-html5/6774/000000"
-              className="w-full rounded-2xl h-[40px] sm:h-[60px]"
-              style={{ border: 'none' }}
-              title="Player Rádio A7 Gospel"
-              loading="lazy"
-              allow="autoplay" />
-            
+          transition={{ delay: 0.2 }}
+          className="relative rounded-3xl overflow-hidden shadow-2xl shadow-texas-dark/30 max-w-4xl mx-auto"
+        >
+          {/* Slideshow background */}
+          <div className="relative h-64 sm:h-80 overflow-hidden">
+            {images.map((img, i) => (
+              <img
+                key={i}
+                src={img}
+                alt=""
+                className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
+                  i === current ? "opacity-100" : "opacity-0"
+                }`}
+                loading="lazy"
+                width={1920}
+                height={1080}
+              />
+            ))}
+            <div className="absolute inset-0 bg-linear-to-t from-texas-dark via-texas-dark/10 to-transparent" />
+
+            {/* Equalizer bars */}
+            <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex items-end gap-1">
+              {[...Array(20)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="w-1 rounded-full bg-secondary/80"
+                  animate={{
+                    height: [8, Math.random() * 30 + 10, 8],
+                  }}
+                  transition={{
+                    duration: 0.8 + Math.random() * 0.4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: i * 0.05,
+                  }}
+                />
+              ))}
+            </div>
           </div>
 
-          {/* Auto-sliding carousel */}
-          <div className="relative h-48 md:h-56 overflow-hidden">
-            {slides.map((slide, i) =>
-            <div
-              key={i}
-              className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
-              style={{ opacity: current === i ? 1 : 0 }}>
-              
-                <img
-                src={slide}
-                alt="Gospel worship"
-                className="w-full h-full object-cover"
-                loading="lazy" />
-              
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
-              </div>
-            )}
-            {/* Dots */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-              {slides.map((_, i) =>
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                current === i ? 'bg-accent w-6' : 'bg-foreground/30'}`
-                } />
-
-              )}
-            </div>
+          {/* Player iframe */}
+          <div className="relative bg-texas-dark">
+            <iframe
+              src="https://player.srvvox.com.br/player-topo-html5/7680/000000"
+              className="h-10 sm:h-20 w-full border-0"
+              title="Texas Brasil FM - Player ao vivo"
+              allow="autoplay"
+            />
           </div>
         </motion.div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default LivePlayer;
