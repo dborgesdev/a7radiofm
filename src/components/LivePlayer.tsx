@@ -67,7 +67,7 @@ const LivePlayer = () => {
               {[...Array(20)].map((_, i) => (
                 <motion.div
                   key={i}
-                  className="w-1 rounded-full bg-secondary/80"
+                  className="w-1 rounded-full bg-[#F0008F]"
                   animate={{
                     height: [8, Math.random() * 30 + 10, 8],
                   }}
