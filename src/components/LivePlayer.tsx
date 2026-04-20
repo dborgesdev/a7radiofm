@@ -60,7 +60,8 @@ const LivePlayer = () => {
                 height={1080}
               />
             ))}
-            <div className="absolute inset-0 bg-linear-to-t from-texas-dark via-texas-dark/10 to-transparent" />
+            <div className="absolute inset-0 bg-background/70" />
+            <div className="absolute inset-0 aura-bg" />
 
             {/* Equalizer bars */}
             <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex items-end gap-1">
