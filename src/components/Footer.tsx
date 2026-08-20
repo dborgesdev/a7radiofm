@@ -18,7 +18,7 @@ const Footer = () => {
               Você ouve e adora.
             </p>
             <p className="text-muted-foreground/60 font-body text-base">
-              Apucarana - Paraná
+              On-line do Brasil para o Mundo!
             </p>
           </div>
 
@@ -46,11 +46,22 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col items-center gap-4">
             <img
               alt="Clube de Rádios"
               className="h-16 w-auto"
               src={clubeLogo}
+            />
+            <img
+              src="/radiosnet.webp"
+              alt="RádiosNet"
+              className="w-30 h-14 rounded-sm drop-shadow-[0_0_20px_rgba(0,210,255,0.4)]"
+            />
+
+            <img
+              src="/radiobox.webp"
+              alt="Online Radio Box"
+              className="w-30 h-14 rounded-sm drop-shadow-[0_0_20px_rgba(0,210,255,0.4)]"
             />
           </div>
         </div>

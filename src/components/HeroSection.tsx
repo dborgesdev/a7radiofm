@@ -41,13 +41,13 @@ const HeroSection = () => {
           3. 'justify-center' centraliza o texto apenas no espaço que sobrou abaixo do Header.
       */}
       <div className="relative z-10 container mx-auto px-4 flex-1 flex flex-col justify-center items-center text-center pt-[80px] md:pt-[100px] pb-12">
-        
         <div className="max-w-5xl w-full">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="uppercase tracking-[0.2em] text-muted-foreground mb-4 md:mb-6 font-body text-sm md:text-2xl">
+            className="uppercase tracking-[0.2em] text-muted-foreground mb-4 md:mb-6 font-body text-sm md:text-2xl"
+          >
             Você ouve e adora!
           </motion.p>
 
@@ -55,7 +55,8 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: [0.23, 1, 0.32, 1] }}
-            className="font-display text-4xl md:text-7xl lg:text-8xl font-bold hero-text-gradient mb-6 md:mb-8 leading-[1.1]">
+            className="font-display text-4xl md:text-7xl lg:text-8xl font-bold hero-text-gradient mb-6 md:mb-8 leading-[1.1]"
+          >
             Onde a Palavra ganha voz e a música vira oração.
           </motion.h1>
 
@@ -63,8 +64,10 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-12 font-body">
-            Conectando corações ao céu. Transmissão 24 horas de excelência, propósito e fé.
+            className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-12 font-body"
+          >
+            On-line do Brasil para o Mundo. Conectando corações ao céu.
+            Transmissão 24 horas de excelência, propósito e fé.
           </motion.p>
 
           <motion.a
@@ -74,7 +77,8 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.8 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-3 brand-gradient px-6 py-3 md:px-8 md:py-4 rounded-2xl text-base md:text-lg font-semibold text-accent-foreground animate-pulse-glow cursor-pointer">
+            className="inline-flex items-center gap-3 brand-gradient px-6 py-3 md:px-8 md:py-4 rounded-2xl text-base md:text-lg font-semibold text-accent-foreground animate-pulse-glow cursor-pointer"
+          >
             <PlayCircle size={24} className="md:w-7 md:h-7" />
             Ouça Agora
           </motion.a>
