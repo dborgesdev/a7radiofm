@@ -57,7 +57,10 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4, ease: [0.23, 1, 0.32, 1] }}
             className="font-display text-4xl md:text-7xl lg:text-8xl font-bold hero-text-gradient mb-6 md:mb-8 leading-[1.1]"
           >
-            Onde a Palavra ganha voz e a música vira oração.
+            Onde a Palavra ganha voz e a música vira oração
+            <span className="block mt-4 text-2xl sm:text-3xl md:text-4xl text-[#d0c7b7] font-sans font-light tracking-normal drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+              On-line do Brasil para o Mundo
+            </span>
           </motion.h1>
 
           <motion.p
@@ -66,8 +69,8 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-12 font-body"
           >
-            On-line do Brasil para o Mundo. Conectando corações ao céu.
-            Transmissão 24 horas de excelência, propósito e fé.
+            Conectando corações ao céu. Transmissão 24 horas de excelência,
+            propósito e fé.
           </motion.p>
 
           <motion.a
