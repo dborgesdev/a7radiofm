@@ -68,7 +68,7 @@ const AppDownload = () => {
               {platforms.map((platform, i) => (
                 <motion.a
                   key={platform.name}
-                  href="https://player.srvvox.com.br/player-app-multi-plataforma/7680"
+                  href="https://player.svrdedicado.org/player-app-multi-plataforma/7522"
                   target="_blank"
                   rel="noopener noreferrer"
                   initial={{ opacity: 0, y: 20 }}
