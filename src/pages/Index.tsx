@@ -18,7 +18,7 @@ const Index = () => {
       <HeroSection />
       <WhyListenSection />
       <LivePlayer />
-      <VideoSection />
+      {/* <VideoSection /> */}
       <AboutSection />
       <ContentCards />
       <QuoteBanner />
