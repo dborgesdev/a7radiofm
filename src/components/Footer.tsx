@@ -46,22 +46,29 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="flex flex-col items-center gap-4">
+          <div className="grid grid-cols-2 items-center gap-4">
             <img
               alt="Clube de Rádios"
-              className="h-16 w-auto"
+              className="h-16 mx-auto w-auto"
               src={clubeLogo}
             />
+
             <img
               src="/radiosnet.webp"
               alt="RádiosNet"
-              className="w-30 h-14 rounded-sm drop-shadow-[0_0_20px_rgba(0,210,255,0.4)]"
+              className="mx-auto w-auto h-14 rounded-sm drop-shadow-[0_0_20px_rgba(0,210,255,0.4)]"
             />
 
             <img
               src="/radiobox.webp"
               alt="Online Radio Box"
-              className="w-30 h-14 rounded-sm drop-shadow-[0_0_20px_rgba(0,210,255,0.4)]"
+              className="mx-auto w-auto h-14 rounded-sm drop-shadow-[0_0_20px_rgba(0,210,255,0.4)]"
+            />
+
+            <img
+              src="/mytuner.webp"
+              alt="My Tuner"
+              className="mx-auto w-auto h-14 rounded-[4px] drop-shadow-[0_0_20px_rgba(0,210,255,0.4)]"
             />
           </div>
         </div>
