@@ -6,7 +6,8 @@ import carouselBand from "@/assets/carousel-band-1.jpg";
 import carouselCrowd from "@/assets/carousel-crowd-1.jpg";
 
 const images = [carouselWorship, carouselArtist, carouselBand, carouselCrowd];
-const playerIframeUrl = "https://player.svrdedicado.org/player-topo-html5/7522/000000";
+const playerIframeUrl =
+  "https://player.svrdedicado.org/player-topo-html5/7522/000000";
 
 const LivePlayer = () => {
   const [current, setCurrent] = useState(0);
@@ -89,7 +90,7 @@ const LivePlayer = () => {
             <iframe
               src={playerIframeUrl}
               title="A7 Gospel - Player ao vivo"
-              className="h-20 w-full border-0"
+              className="h-10 sm:h-14 w-full border-0"
               allow="autoplay"
             />
           </div>
