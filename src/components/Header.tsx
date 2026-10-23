@@ -6,7 +6,7 @@ const navLinks = [
   { label: "Ao Vivo", target: "#player" },
   { label: "Sobre", target: "#sobre" },
   { label: "Conteúdo", target: "#conteudo" },
-  { label: "App", target: "#app" }
+  { label: "App", target: "#app" },
 ];
 
 const Header = () => {
@@ -29,7 +29,6 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        
         {/* 1. ZONA ESQUERDA: Menu Mobile (Mobile) / Logo (Desktop) */}
         <div className="flex flex-1 md:flex-none items-center">
           {/* Botão Menu - Visível apenas no Mobile */}
@@ -43,10 +42,10 @@ const Header = () => {
 
           {/* Logo - Visível apenas no Desktop nesta posição */}
           <a href="#" className="hidden md:flex items-center gap-2">
-            <img 
-              alt="Rádio A7 Gospel" 
-              className="h-20 w-auto object-contain transition-all duration-300" 
-              src="logo_a7gospel.png" 
+            <img
+              alt="Rádio A7 Gospel"
+              className="h-20 w-auto object-contain transition-all duration-300"
+              src="logo_a7gospel.png"
             />
           </a>
         </div>
@@ -55,10 +54,10 @@ const Header = () => {
         <div className="flex flex-[3] md:flex-1 justify-center md:justify-start md:pl-12">
           {/* Logo Centralizado - Visível apenas no Mobile */}
           <a href="#" className="md:hidden flex items-center">
-            <img 
-              alt="Rádio A7 Gospel" 
-              className="h-[120px] w-auto object-contain" 
-              src="logo_a7gospel.png" 
+            <img
+              alt="Rádio A7 Gospel"
+              className="h-[120px] w-auto object-contain"
+              src="logo_a7gospel.png"
             />
           </a>
 
@@ -84,7 +83,7 @@ const Header = () => {
           >
             Baixar App
           </a>
-          
+
           {/* Espaçador invisível no mobile para manter o centro do logo perfeito */}
           <div className="w-10 md:hidden"></div>
         </div>
